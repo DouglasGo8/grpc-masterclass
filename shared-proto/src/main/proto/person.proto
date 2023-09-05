@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "common/car.proto";
+import "common/address.proto";
+//import "google/protobuf/wrappers.proto";
+
+option java_multiple_files = true;
+option java_package = "com.udemy.grpc.masterclass.shared.proto.models";
+
+/*
+ Add multi-line comments here
+ @see This is my person proto file
+*/
+message Person {
+  // single comment
+  string name = 1; //posix
+  int32 age = 2;
+  common.Address address = 3;
+  repeated common.Car car = 4;
+}
+
+
+
